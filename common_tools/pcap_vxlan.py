@@ -10,7 +10,7 @@ def host2str(host):
     hexStr = hexlify(packed_ip_addr)
     return hexStr.decode("utf-8")
 
-if __name__ == "__main__":
+def runner():
     usage = '''usage: %prog [options]
 It is a script which is used to capture vxlan packet'''
     parser = OptionParser(usage)
@@ -61,4 +61,7 @@ It is a script which is used to capture vxlan packet'''
         print(stats.ps_drop, " packets dropped by kernel")
         print(stats.ps_ifdrop, " packets dropped by iface")
 
+
+if __name__ == "__main__":
+    runner()
 
