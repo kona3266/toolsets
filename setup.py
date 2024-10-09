@@ -29,5 +29,9 @@ setup(
         entry_points={'console_scripts': [
             'tree-cli = common_tools.tree_cli:cmd_runner',
             'heapsort = common_tools.heapsort:runner',
-        ]}
+        ]},
+        install_requires=[
+            'python-libpcap',
+            'Cython'
+        ]
 )
